@@ -1,7 +1,9 @@
 <template>
   <div>
     <div id="modal" class="modal" v-if="modal">
-      <div class="mobile__img"></div>
+      <div class="mobile__img">
+        {{ teste }}
+      </div>
       <div class="modal__wrapper">
           <span class="modal__wrapper__close" @click="$emit('closed', $event)"></span>
           <div class="modal__wrapper__camera" :class="detectBrowser.firefox && loaded && 'modal__wrapper__camera--w_auto'">
@@ -89,6 +91,9 @@ export default {
         firefox: false,
       };
     },
+    teste() {
+      return navigator.userAgent
+    }
   },
   mounted() {
     if (window.innerWidth < 769) {
