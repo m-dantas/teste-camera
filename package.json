@@ -4,11 +4,20 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "start": "nodemon api/index.js",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "compressorjs": "^1.0.7",
     "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "imagemin": "^7.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "mkcert": "^1.4.0",
+    "nodemon": "^2.0.12",
+    "sharp": "^0.29.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
